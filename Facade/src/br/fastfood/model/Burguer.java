@@ -9,22 +9,20 @@ public class Burguer implements ItemCombo{
 	        this.preco = preco;
 	    }
 	    
-	    public void BigMac(){
-	    	Burguer bigmac = new Burguer("Big Mac",35);
+	    public static Burguer BigMac(){
+	    	return new Burguer("Big Mac",35);
 	    }
 	    
-	    public void BigTasty(){
-	    	Burguer bigtasty = new Burguer("Big Tasty",45);
+	    public static Burguer BigTasty(){
+	    	return new Burguer("Big Tasty",45);
 	    }
-	    
-	    public void MacLancheFeliz(){
-	    	Burguer maclanchefeliz = new Burguer("Mac Lanche Feliz",5);
-	    }
-	    
+
+	    @Override
 	    public String getNome()  
 	    { 
 	    	return nome; 
 	    }
+		@Override
 	    public double getPreco() { 
 	    	return preco; 
 	    }

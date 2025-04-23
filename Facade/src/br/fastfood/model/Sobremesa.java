@@ -8,25 +8,25 @@ public class Sobremesa implements ItemCombo {
        this.nome = nome;
        this.preco = preco;
    }
-   public void Maca(){
-    	Sobremesa maca = new Sobremesa("Maça",12);
+   public static Sobremesa Maca(){
+    	return new Sobremesa("Maça",12);
    }
 	
-   public void Sorvete(){
-   	  Sobremesa sorvete = new Sobremesa("sorvete",12);
+   public static Sobremesa Sorvete(){
+
+        return new Sobremesa("sorvete",12);
    }
-   
-   public void Mousse(){
-	   	  Sobremesa mousse = new Sobremesa("mousse",12);
-   }
-	
+
+	@Override
    public String getNome()  
    { 
    	 return nome; 
    }
+   @Override
    public double getPreco() { 
    	 return preco; 
    }
+
    @Override public String toString() { 
    	return nome + " R$" + preco; 
    	

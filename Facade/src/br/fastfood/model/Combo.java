@@ -1,20 +1,37 @@
 package br.fastfood.model;
 
+import br.fastfood.facade.ComboFacade;
+
 public class Combo {
-	private ItemCombo burguer = new Burguer("Manjado", 15);
-	private ItemCombo bebida = new Bebida("Coca-Cola", 10);
-	private ItemCombo sobremesa = new Sobremesa("Bolo", 12);
-	private ItemCombo combo;
-	
-	Combo(Burguer burger, Bebida bebida, Sobremesa sobremesa ){
-		this.burguer = burguer;
-		this.bebida = bebida;
-		this.sobremesa = sobremesa;
-	}
-	
-	
-	public Combo getCombo1() {
-		Combo combo = new Combo(new Burguer(""))
-	}
-	
+    private final ItemCombo burguer;
+    private final ItemCombo bebida;
+    private final ItemCombo sobremesa;
+
+    public Combo(ItemCombo burguer, ItemCombo bebida, ItemCombo sobremesa){
+        this.burguer = burguer;
+        this.bebida = bebida;
+        this.sobremesa = sobremesa;
+    }
+
+    public ItemCombo getBurguer(){
+        return burguer;
+    }
+
+    public ItemCombo getBebida(){
+        return bebida;
+    }
+
+    public ItemCombo getSobremesa(){
+        return sobremesa;
+    }
+
+    public double getPrecoTotal(){
+        return burguer.getPreco() + bebida.getPreco() + sobremesa.getPreco();
+    }
+
+    public void exibirItens(){
+        System.out.println(burguer.toString());
+        System.out.println(bebida.toString());
+        System.out.println(sobremesa.toString());
+    }
 }
