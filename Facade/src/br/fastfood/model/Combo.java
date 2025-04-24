@@ -1,7 +1,5 @@
 package br.fastfood.model;
 
-import br.fastfood.facade.ComboFacade;
-
 public class Combo {
     private final ItemCombo burguer;
     private final ItemCombo bebida;
@@ -11,18 +9,6 @@ public class Combo {
         this.burguer = burguer;
         this.bebida = bebida;
         this.sobremesa = sobremesa;
-    }
-
-    public ItemCombo getBurguer(){
-        return burguer;
-    }
-
-    public ItemCombo getBebida(){
-        return bebida;
-    }
-
-    public ItemCombo getSobremesa(){
-        return sobremesa;
     }
 
     public double getPrecoTotal(){
